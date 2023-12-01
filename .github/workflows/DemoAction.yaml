@@ -1,0 +1,16 @@
+name: Github Action Demo
+on:
+  workflow_dispatch:
+    inputs:
+      var_deploy:
+        description: 'variable denvironement sur le declencheur manuel'
+        required: true
+        default: 'dev'
+    
+jobs:
+
+  get_source:
+    runs-on: unbuntu-latest
+    steps:
+      - name: workflow start
+        run: echo "workflow demarrer"
